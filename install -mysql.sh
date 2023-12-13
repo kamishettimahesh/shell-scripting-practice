@@ -18,8 +18,8 @@ then
    exit 1
 fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysql -y  &>>  $LOGFILE
 $VALIDATE  $? "INSTALLING MYSQL"
 
-yum install git -y &>> $LOGFILE
+yum install git -y &>>  $LOGFILE
 $VALIDATE $? "INSTALLING GIT"

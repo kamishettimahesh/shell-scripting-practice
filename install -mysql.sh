@@ -1,6 +1,6 @@
 #!/bin/bash
 ID=$(id -u)
-TIMESTAMP=$(date+%F.%H:%M:%S)
+TIMESTAMP=$(date +%F.%H:%M:%S)
 echo "script name: $0"
 VALIDATE( ){
 if [ $1 -ne 0 ]

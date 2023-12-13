@@ -26,3 +26,10 @@ VALIDATE  $? "INSTALLING MYSQL"
 
 yum install git -y &>>  $LOGFILE
 VALIDATE $? "INSTALLING GIT"
+
+yum install maven -y &>> $LOGFILE
+VALIDATE $? "INSTALLING MAVEN"
+
+yum install nginx -y &>> $LOGFILE
+
+VALIDATE $? "Installing NGINX"

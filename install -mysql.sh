@@ -17,7 +17,6 @@ then
    echo "error :please run with root user"
    exit 1
 fi
-
 yum install mysql -y  &>>  $LOGFILE
 $VALIDATE  $? "INSTALLING MYSQL"
 

@@ -10,15 +10,15 @@ echo "script name: $0"
 VALIDATE( ) {
 if [ $1 -ne 0 ]
 then 
-echo -e"ERROR :: $2 ....$R FAILED $N"
+echo -e "ERROR :: $2 ....$R FAILED $N"
 exit 1
 else 
-echo -e"$2 ...$G SUCESS $N"
+echo -e "$2 ...$G SUCESS $N"
 fi
 }
 if [ $ID -ne 0 ]
 then 
-   echo -e"$R error :please run with root user $N"
+   echo -e "$R error :please run with root user $N"
    exit 1
 fi
 yum install mysql -y  &>>  $LOGFILE

@@ -3,13 +3,13 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F.%H:%M:%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "script name: $0"
-VALIDATE( ){
+VALIDATE( ) {
 if [ $1 -ne 0 ]
 then 
 echo "ERROR :: $2 ....FAILED"
 exit 1
 else 
-echo"$2 ...SUCESS"
+echo "$2 ...SUCESS"
 fi
 }
 if [ $ID -ne 0 ]

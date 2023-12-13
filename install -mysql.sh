@@ -21,7 +21,7 @@ then
    echo -e "$R error :please run with root user $N"
    exit 1
 fi
-yum install mysqll -y  &>>  $LOGFILE
+yum install mysql -y  &>>  $LOGFILE
 VALIDATE  $? "INSTALLING MYSQL"
 
 yum install git -y &>>  $LOGFILE

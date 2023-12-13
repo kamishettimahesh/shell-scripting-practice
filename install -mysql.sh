@@ -1,20 +1,24 @@
 #!/bin/bash
 ID=$(id -u)
 TIMESTAMP=$(date +%F.%H:%M:%S)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33"
+N="\e[0m"
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "script name: $0"
 VALIDATE( ) {
 if [ $1 -ne 0 ]
 then 
-echo "ERROR :: $2 ....FAILED"
+echo "ERROR :: $2 ....$R FAILED $N"
 exit 1
 else 
-echo "$2 ...SUCESS"
+echo "$2 ...$G SUCESS $N"
 fi
 }
 if [ $ID -ne 0 ]
 then 
-   echo "error :please run with root user"
+   echo "$R error :please run with root user $N"
    exit 1
 fi
 yum install mysql -y  &>>  $LOGFILE

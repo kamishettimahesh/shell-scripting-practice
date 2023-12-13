@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u)
 TIMESTAMP=$(date +%F.%H:%M:%S)
-LOGFILE="/tmp/$0-$TIMESTAMP.log
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "script name: $0"
 VALIDATE( ){
 if [ $1 -ne 0 ]

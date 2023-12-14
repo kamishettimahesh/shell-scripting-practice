@@ -11,6 +11,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE () {
 
+# shellcheck disable=SC2086
 if [ $1 -ne 0 ]
 
 then
@@ -21,7 +22,8 @@ else
 fi
 }
 
-if [ $ID -ne 0 ]
+if [ "$ID" -ne 0 ]
+
 then 
     echo -e "$R Error:: please run with root user $N"
     exit 1

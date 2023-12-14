@@ -41,10 +41,16 @@ VALIDATE(){
 
      VALIDATE  $? " install nodejs "
      
-     useradd roboshop &>>  $LOGFILE
-     VALIDATE $? " Create user roboshop "
+       id roboshop
+    if [ $? -ne 0 ]
+    then
+          useradd roboshop
+           VALIDATE $? "roboshop user creation"
+    else
+        echo -e "roboshop user already exist $Y SKIPPING $N"
+    fi
 
-     mkdir /app  &>> $LOGFILE
+     mkdir -p /app
      VALIDATE $? " Create app directory "
 
      curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip  &>> $LOGFILE

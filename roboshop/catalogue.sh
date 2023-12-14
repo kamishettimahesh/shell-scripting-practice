@@ -90,6 +90,8 @@ VALIDATE(){
 
       mongo --host 172.31.90.96 </app/schema/catalogue.js
 
+      VALIDATE $? " load schema "
+
 
 
 

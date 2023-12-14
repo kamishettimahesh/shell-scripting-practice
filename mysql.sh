@@ -20,9 +20,10 @@ else
   echo -e "$2 .... $G success $N"
 fi
 }
+
 if [ $ID -ne 0 ]
 then 
-    echo "$R Error:please run with root user $N"
+    echo -e "$R Error:: please run with root user $N"
     exit 1
 else 
    echo "you are root user"

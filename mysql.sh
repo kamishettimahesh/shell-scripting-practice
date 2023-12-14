@@ -9,7 +9,7 @@ TIMESTAMP=$(date +%F.%H:%M:%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-VALIDATE () {
+VALIDATE (){
 
 if [ $1 -ne 0 ]
 
@@ -30,7 +30,7 @@ then
 
 else
 
-   echo "you are root user"
+   echo "you are SUPER user"
 
 fi
 

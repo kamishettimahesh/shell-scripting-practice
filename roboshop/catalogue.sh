@@ -23,10 +23,10 @@ VALIDATE(){
 
     if [ $ID -ne 0 ]
     then
-       echo " $R Error: : you are not a root user $N "
+       echo -e " $R Error: : you are not a root user $N "
         exit 1
     else 
-       echo " $G you are root user $N "  
+       echo -e " $G you are root user $N "  
 
      fi
 
@@ -83,7 +83,7 @@ VALIDATE(){
       VALIDATE $? "Install mongodb"
 
       mongo --host 172.31.90.96 </app/schema/catalogue.js
-      
+
 
 
 

@@ -60,13 +60,13 @@ VALIDATE(){
 
      VALIDATE $? " Changing to app dir "
 
-     unzip -o /tmp/catalogue.zip  $>> $LOGFILE
+     unzip -o /tmp/catalogue.zip  &>> $LOGFILE
      VALIDATE $? " Unzip catalogue app "
 
      npm install  &>> $LOGFILE
      VALIDATE $? " Download dependenices "
      
-     cp /home/centos/shell-scripting-practice/roboshop/catalogue.service etc/systemd/system/catalogue.service  &>> $LOGFILE
+     cp /home/centos/shell-scripting-practice/roboshop/catalogue.service /etc/systemd/system/catalogue.service  &>> $LOGFILE
 
      VALIDATE $? " Coping catalogue.service "
 

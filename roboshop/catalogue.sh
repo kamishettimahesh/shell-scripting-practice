@@ -60,7 +60,7 @@ VALIDATE(){
 
      VALIDATE $? " Changing to app dir "
 
-     unzip /tmp/catalogue.zip  $>> $LOGFILE
+     unzip -o /tmp/catalogue.zip  $>> $LOGFILE
      VALIDATE $? " Unzip catalogue app "
 
      npm install  &>> $LOGFILE

@@ -9,6 +9,8 @@ N="\e[0m"
 if [ ! -d $LOG_DIR ]
 then
    echo -e "$R log directory:$LOG_DIR does not exists $N"
+
+   exit 1
  fi
 
  FILES_TO_DELETE:$(find "$LOG_DIR" -type f -mtime +5 -name "*.log" )

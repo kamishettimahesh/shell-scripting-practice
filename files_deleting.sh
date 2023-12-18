@@ -11,7 +11,7 @@ then
    echo -e "$R source directory:$LOG_DIR does not exists $N"
  fi
 
- FILES_TO_DELETE:$(find $LOG_DIR -type f -mtime +4 -name "*.log" )
+ FILES_TO_DELETE: $(find "$LOG_DIR" -type f -mtime +4 -name "*.log" )
 
 while IFS= read -r file
 

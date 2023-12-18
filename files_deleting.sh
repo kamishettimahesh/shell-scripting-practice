@@ -16,7 +16,7 @@ then
 while IFS= read -r file
 
 do 
- echo"deleting file: $file"
+ echo "deleting file:$file"
  rm -rf "$file"
 
 done <<< $FILES_TO_DELETE

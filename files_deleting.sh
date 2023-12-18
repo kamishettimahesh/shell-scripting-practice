@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_DIR="/tmp/shell.logs"
+LOG_DIR="/tmp/shell-logs"
 
 if [ !-d $LOG_DIR ]
 then
